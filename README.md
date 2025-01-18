@@ -1,45 +1,168 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NEAR Token Factory Frontend
 
-## Getting Started
+A Next.js-based frontend application for interacting with the NEAR Token Factory smart contracts. This interface allows users to create and manage fungible tokens with auction functionality on the NEAR blockchain.
 
-First, run the development server:
+## Overview
+
+This frontend provides an intuitive interface for users to:
+- Create new fungible tokens
+- Configure token parameters
+
+## Features
+
+* **Token Creation Interface**:
+  * Form-based token creation
+  * Metadata configuration
+  * Supply management
+  * Auction parameter settings
+  * Storage deposit handling
+
+* **Token Management Dashboard**:
+  * Token overview
+  * Auction status tracking
+  * Order management
+  * Distribution monitoring
+  * Balance checking
+
+* **User Account Management**:
+  * NEAR wallet integration
+  * Storage deposit tracking
+  * Token balance display
+  * Transaction history
+
+## Prerequisites
+
+* Node.js (v16 or later)
+* npm or yarn
+* NEAR Wallet Account
+* Web browser with NEAR Wallet extension
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/near-token-factory-frontend.git
+cd near-token-factory-frontend
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Configure environment variables:
+
+```env
+NEXT_PUBLIC_NETWORK_ID=testnet
+NEXT_PUBLIC_NODE_URL=https://rpc.testnet.near.org
+NEXT_PUBLIC_WALLET_URL=https://wallet.testnet.near.org
+NEXT_PUBLIC_HELPER_URL=https://helper.testnet.near.org
+NEXT_PUBLIC_CONTRACT_NAME=your-contract-name.testnet
+```
+
+4. Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Connecting to NEAR Wallet
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Click "Connect Wallet" button
+2. Approve the connection request in your NEAR wallet
+3. Once connected, your account information will be displayed
 
-## Learn More about NEAR
+### Creating a New Token
 
-To learn more about NEAR, take a look at the following resources:
+1. Navigate to "Create Token" section
+2. Fill in the token details:
+   - Token name
+   - Symbol
+   - Total supply
+   - Decimals
+   - Auction parameters
+3. Submit the form and approve the transaction in your NEAR wallet
 
-- [NEAR Documentation](https://docs.near.org) - learn about NEAR.
-- [Frontend Docs](https://docs.near.org/build/web3-apps/quickstart) - learn about this example.
+### Managing Auctions
 
-You can check out [the NEAR repository](https://github.com/near) - your feedback and contributions are welcome!
+1. Go to "My Tokens" section
+2. Select a token to view its auction details
+3. Monitor bids and auction progress
+4. Manage token distribution after auction completion
 
-## Learn More about Next.js
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── components/         # Reusable UI components
+├── pages/             # Next.js pages
+├── contexts/          # React contexts
+├── hooks/             # Custom React hooks
+├── services/          # API and blockchain services
+├── styles/            # CSS and styling files
+└── utils/             # Helper functions
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Components
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+* **Token Creator**: Form interface for token creation
+* **Wallet Connector**: NEAR wallet integration
+* **Transaction Monitor**: Transaction status tracking
+* **Balance Display**: Account and token balance display
 
-## Deploy on Vercel
+## Development
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Running Tests
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+npm test
+# or
+yarn test
+```
+
+### Building for Production
+
+```bash
+npm run build
+# or
+yarn build
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
+
+## Security Considerations
+
+* Always verify transaction details
+* Never share private keys
+* Check contract addresses
+* Verify token parameters before creation
+
+## Resources
+
+* [NEAR Protocol Documentation](https://docs.near.org)
+* [Next.js Documentation](https://nextjs.org/docs)
+* [NEAR Wallet Integration Guide](https://docs.near.org/docs/develop/basics/web3-login)
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+* NEAR Protocol team
+* Next.js community
+* NEAR Wallet developers
