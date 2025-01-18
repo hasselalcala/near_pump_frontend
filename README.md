@@ -1,4 +1,4 @@
-# NEAR Token Factory Frontend
+# NEAR Pump Frontend
 
 A Next.js-based frontend application for interacting with the NEAR Token Factory smart contracts. This interface allows users to create and manage fungible tokens with auction functionality on the NEAR blockchain.
 
